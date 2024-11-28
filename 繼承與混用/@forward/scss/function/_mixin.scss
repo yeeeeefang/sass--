@@ -1,0 +1,10 @@
+@mixin single-ellipsis{
+    /* 單行省略 */
+    overflow: hidden;//溢出這個區塊就隱藏，沒有特別寫就是預設顯示(visible)
+    text-overflow: ellipsis;//溢出文字方塊出現省略號
+    white-space: nowrap;//不要換行
+    // -webkit-box-orient: vertical;
+}
+@mixin bordered($width:2px,$color:#852){
+    border: $width solid $color;
+}

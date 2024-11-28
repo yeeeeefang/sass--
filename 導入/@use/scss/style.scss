@@ -1,0 +1,60 @@
+@use 'variables' as v;
+@import 'reset' ;
+
+
+a {
+    display: block;
+    text-decoration: none;
+    font-size: (map-get(v.$font-size,s ));
+    line-height: (map-get(v.$font-size,s ))*1.5;
+
+    &:hover {
+        border-bottom: solid 2px #666;
+        color: aquamarine;
+    }
+
+    .icon & {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+        transition: .4s;
+    }
+
+    .menu & {
+        margin: 10px;
+        padding: 7px 0 5px;
+
+        &:hover {
+            border-bottom: solid 2px v.$color-grey;
+            color: v.$color-black;
+        }
+    }
+
+}
+
+.box {
+    background: {
+        size: 100%;
+        color: #b41c1c;
+        repeat: no-repeat;
+    }
+
+    font: {
+        size: map-get(v.$font-size,m);
+        weight: bold;
+        family: sans-serif;
+    }
+
+    line-height: map-get(v.$font-size,m)*1.5;
+}
+
+/* 手機 */
+@media(v.$mediaSm) {
+    .listbox {
+        flex-direction: column;
+    }
+
+    .listbox {
+        margin: v.$interval-xl-lg;
+    }
+}

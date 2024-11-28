@@ -1,0 +1,126 @@
+nav {
+    display: flex;
+    /* 主軸方向 水平 */
+    justify-content: space-between;
+    /* 主軸(水平)左右均分 */
+    align-items: center;
+
+    ul {
+        list-style: none;
+        display: flex;
+
+        
+    }
+}
+
+//變數
+//前綴詞的定義
+$narbar-prefix: nav;
+$narbar-prefix: btn;
+
+//字級
+// $font-size-xs: .8rem;
+// $font-size-s: 1rem;
+// $font-size-m: 1.2rem;
+// $font-size-l: 1.4rem;
+// $font-size-xl: 1.6rem;
+// $font-size-xxl: 1.8rem;
+// $font-size-xxxl: 2rem;
+
+$font-size: ( //map-get($font-size,s )
+    xs: .8rem,
+    s:1rem,
+    m: 1.2rem,
+    l: 1.4rem,
+    xl:1.6rem,
+    xxl:1.8rem,
+    xxxl:2rem,
+    );
+    
+    //顏色
+    $color-primary: rgb(22, 158, 90);
+    $color-secondary: #666;
+    $color-alpha-b85: rgba(247, 161, 161, 0.767);
+    $color-deep: #b41c1c;
+    $color-black: #222;
+    $color-grey: #777;
+
+    //間距
+    $interval-xs: 2px;
+    $interval-sm: 4px;
+    $interval-md: 8px;
+    $interval-lg: 16px;
+    $interval-xl: 24px;
+    $interval-xxl: 32px;
+    $interval-xxxl: 80px;
+
+    $interval-xl-lg: 15px 0;
+
+    //速率
+    $speed-fast: .4s;
+    $speed-slow: 1S;
+
+    //斷點
+    $mediaSm: 'max-width: 640px';
+    $mediaMd: 'max-width: 1023px';
+    $mediaLg: 'min-width: 1024px';
+
+    $narbar-prefix: btn;
+
+    a {
+        display: block;
+        text-decoration: none;
+        font-size: (map-get($font-size,s ));
+        line-height: (map-get($font-size,s ))*1.5;
+    
+        &:hover {
+            border-bottom: solid 2px #666;
+            color: aquamarine;
+        }
+    
+        .icon & {
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+            transition: .4s;
+        }
+    
+        .menu & {
+            margin: 10px;
+            padding: 7px 0 5px;
+    
+            &:hover {
+                border-bottom: solid 2px $color-grey;
+                color: $color-black;
+            }
+        }
+    
+    }
+    
+    .box {
+        background: {
+            size: 100%;
+            color: #b41c1c;
+            repeat: no-repeat;
+        }
+    
+        font: {
+            size: map-get($font-size,m);
+            weight: bold;
+            family: sans-serif;
+        }
+    
+        line-height: map-get($font-size,m)*1.5;
+    }
+    
+    /* 手機 */
+    @media($mediaSm) {
+        .listbox {
+            flex-direction: column;
+        }
+    
+        .listbox {
+            margin: $interval-xl-lg;
+        }
+    }
+    

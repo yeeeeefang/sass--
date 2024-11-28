@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/* 檔案名稱前加'_'不會另外匯出一份CSS檔案 */
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 重置字體 */
+body {
+  font-family: sans-serif;
+  line-height: 1.2;
+}
+
+/* 重置標題 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul, ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 重置連結 */
+a {
+  display: block; /* 將a預設inline改為block，才能設定間距及寬高*/
+  color: #666;
+  text-decoration: none;
+}
+
+/* reset end */
+.box, .new-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.4));
+  backdrop-filter: blur(3px) brightness(120%); /* 模糊 明亮度 */
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15); /* 容器外圍陰影 */
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.btn:hover {
+  border-bottom: solid 2px #666;
+  color: aquamarine;
+}
+.icon .btn {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  transition: 0.4s;
+}
+.menu .btn {
+  margin: 10px;
+  padding: 7px 0 5px;
+}
+.menu .btn:hover {
+  border-bottom: solid 2px #777;
+  color: #222;
+}
+
+.icon-fb {
+  background-image: url(../images/icon-fb.svg);
+}
+
+.icon-fb:hover {
+  background-image: url(../images/icon-fb-hover.svg);
+}
+
+.icon-ig {
+  background-image: url(../images/icon-ig.svg);
+}
+
+.icon-ig:hover {
+  background-image: url(../images/icon-ig-hover.svg);
+}
+
+.icon-line {
+  background-image: url(../images/icon-line.svg);
+}
+
+.icon-line:hover {
+  background-image: url(../images/icon-line-hover.svg);
+}
+
+.box {
+  background-size: 100%;
+  background-color: #b41c1c;
+  background-repeat: no-repeat;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  line-height: 1.8rem;
+}
+
+/* 手機 */
+@media (max-width: 640px) {
+  .listbox {
+    flex-direction: column;
+  }
+  .listbox {
+    margin: 15px 0;
+  }
+}
+.box {
+  /* 單行省略 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 1px solid blue;
+}
+
+.new-box {
+  border: 2px solid #852;
+}/*# sourceMappingURL=style.css.map */

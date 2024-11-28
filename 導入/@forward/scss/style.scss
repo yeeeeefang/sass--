@@ -1,0 +1,61 @@
+@use 'reset' ;
+@use 'variables' as *;
+//@use可以整份檔案內容全部匯入，也可以調用=>就加 as *
+//星號表示接調用，可以省略"v."前綴
+
+a {
+    display: block;
+    text-decoration: none;
+    font-size: (map-get($font-size,s ));
+    line-height: (map-get($font-size,s ))*1.5;
+
+    &:hover {
+        border-bottom: solid 2px #666;
+        color: aquamarine;
+    }
+
+    .icon & {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+        transition: .4s;
+    }
+
+    .menu & {
+        margin: 10px;
+        padding: 7px 0 5px;
+
+        &:hover {
+            border-bottom: solid 2px $color-grey;
+            color: $color-black;
+        }
+    }
+
+}
+
+.box {
+    background: {
+        size: 100%;
+        color: #b41c1c;
+        repeat: no-repeat;
+    }
+
+    font: {
+        size: map-get($font-size,m);
+        weight: bold;
+        family: sans-serif;
+    }
+
+    line-height: map-get($font-size,m)*1.5;
+}
+
+/* 手機 */
+@media($mediaSm) {
+    .listbox {
+        flex-direction: column;
+    }
+
+    .listbox {
+        margin: $interval-xl-lg;
+    }
+}
